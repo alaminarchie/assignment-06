@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  CDN link DaisyUI and Tailwind css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/dcb6fa8a47.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+
+      .active {
+        background-color: #e6f1f2;
+        border: 2px solid #46999e;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "legal-primary": "#B68C5A",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-lato">
+    <header class="w-11/12 mx-auto">
+      <!-- Nav Section -->
+      <section>
+        <nav
+          class="w-11/12 mx-auto py-3 flex flex-col lg:flex-row justify-between items-center gap-4 border-b"
+        >
+          <div class="flex items-center gap-2 w-[100px]">
+            <img src="./images/logo.webp" alt="" />
+            <h4 class="font-extrabold text-2xl">Peddy</h4>
+          </div>
+
+          <div class="">
+            <ul class="flex items-center gap-12">
+              <li><a href="">Home</a></li>
+              <li><a href="">Shop</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="sort border p-4 rounded-full">
+            <img
+              class="w-8 h-8"
+              src="https://img.icons8.com/?size=32&id=22396&format=png"
+              alt=""
+            />
+          </div>
+        </nav>
+      </section>
+
+      <!-- Banner Section -->
+
+      <section>
+        <div
+          class="flex flex-col justify-center items-center text-center gap-4"
+        >
+          <h4 class="text-2xl font-bold mt-10">
+            Bringing Families Together ❤️‍🔥
+          </h4>
+          <h1 class="lg:w-6/12 text-5xl lg:text-7xl font-extrabold lg:mb-8">
+            Your Path to Adoption Starts Here
+          </h1>
+          <p class="lg:w-7/12 mx-6">
+            Cats are incredible! They make great pets, especially for people who
+            are home a lot and can therefore spend a lot of time with their cat.
+            Whilst they are more independent than dogs, cats do still need a lot
+            of care and attention and this should not be underestimated. Cats
+            love to spend time with their humans and being home alone all day is
+            not a very exciting life for them.
+          </p>
+
+          <p>
+            <button class="btn bg-[#0E7A81] w-32 text-white text-sm">
+              View More
+            </button>
+          </p>
+          <div>
+            <img src="./images/pet.webp" alt="" />
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="w-11/12 mx-auto">
+      <section>
+        <div class="text-center lg:w-6/12 mx-auto my-16">
+          <h2 class="text-5xl font-bold lg:mb-8">Adopt Your Best Friend</h2>
+          <p class="mx-6">
+            It is often said that cats do not have owners but butlers, and
+            sometimes it can feel like that! To get a little insight into what
+            life with a cat might be like, we invite you to take up the 30-day
+            cat challenge to see if life with a feline is for you. Your
+            challenge, should you wish to accept it:
+          </p>
+        </div>
+
+        <!-- 4 card section -->
+        <div
+          id="categoryButtons"
+          class="flex flex-col mx-24 lg:mx-0 lg:flex-row lg:justify-evenly gap-5"
+        ></div>
+
+        <div class="flex justify-between items-center my-12">
+          <h4 class="font-extrabold text-xl">Best Deal For you</h4>
+          <p>
+            <button class="btn bg-[#0E7A81] w-32 text-white text-sm">
+              Sort by Price
+            </button>
+          </p>
+        </div>
+      </section>
+
+      <section id="" class="flex flex-col lg:flex-row gap-6">
+        <div
+          id="grid-Card-1"
+          class="lg:w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5 py-6"
+        ></div>
+
+        <div
+          class="lg:w-4/12 h-full] card shadow-xl border py-6 px-6 mt-6 mb-6"
+        >
+          <div id="grid-Card-2" class="grid grid-cols-2 gap-4 mx-auto"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#131313]">
+      <section
+        class="flex flex-col lg:flex-row justify-between gap-12 px-12 bg-[#131313] w-11/12 mx-auto py-16"
+      >
+        <div>
+          <div class="flex items-center gap-2 w-[100px]">
+            <img src="./images/logo.webp" alt="" />
+            <h4 class="font-extrabold text-2xl text-white">Peddy</h4>
+          </div>
+
+          <div>
+            <p class="mb-2 mt-6 text-[#E8E8E8]">
+              Location: av. Washington 165, NY CA 54003
+            </p>
+            <p class="mt-2 text-[#E8E8E8]">Phone: +31 85 964 47 25</p>
+            <p class="mt-2 text-[#E8E8E8]">Email: info@yourdomain.com</p>
+            <p class="mt-2 mb-3 text-[#E8E8E8]">
+              Openings hours: 9.00 AM - 5.00 PM
+            </p>
+          </div>
+
+          <div class="flex gap-4">
+            <img
+              class="w-10 h-10"
+              src="https://img.icons8.com/?size=48&id=118497&format=png"
+              alt=""
+            />
+            <img
+              class="w-10 h-10"
+              src="https://img.icons8.com/?size=48&id=ClbD5JTFM7FA&format=png"
+              alt=""
+            />
+            <img
+              class="w-10 h-10"
+              src="https://img.icons8.com/?size=48&id=9a46bTk3awwI&format=png"
+              alt=""
+            />
+            <img
+              class="w-10 h-10"
+              src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="">
+          <p class="mb-6 text-white text-lg">Useful Links</p>
+
+          <p class="mb-2 text-[#E8E8E8]"><a href="">Home</a></p>
+          <p class="mb-2 text-[#E8E8E8]"><a href="">About Us</a></p>
+          <p class="mb-2 text-[#E8E8E8]"><a href="">Animals</a></p>
+          <p class="mt-2 text-[#E8E8E8]"><a href="">Foundation</a></p>
+          <p class="mt-2 text-[#E8E8E8]"><a href="">Contact</a></p>
+        </div>
+
+        <div>
+          <p class="mb-6 text-white text-lg">Drop a Message</p>
+
+          <input
+            class="py-3 px-3 w-60 bg-[#1F1F1F] rounded-lg mb-4"
+            type="text"
+            placeholder="Enter your email"
+          />
+
+          <p class="">
+            <button
+              class="btn bg-[#0E7A81] w-60 text-white text-sm border-none rounded-lg"
+            >
+              Subscribe
+            </button>
+          </p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
