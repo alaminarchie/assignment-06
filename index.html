@@ -1,237 +1,271 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Assignment Peddy</title>
+    <!--Tailwind css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Font -->
+    <!--favuicon-->
+    <link rel="shortcut icon" href="./images/logo.webp" type="image/x-icon" />
+    <!--google font - lato-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <!--  CDN link DaisyUI and Tailwind css -->
+    <!--google font -inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
-      type="text/css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome CDN -->
-    <script
-      src="https://kit.fontawesome.com/dcb6fa8a47.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <style>
-      .font-lato {
-        font-family: "Lato", sans-serif;
-      }
-
-      .active {
-        background-color: #e6f1f2;
-        border: 2px solid #46999e;
-      }
-    </style>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-              "legal-primary": "#B68C5A",
-            },
+    <!--Remix icon cdn-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            lato: ["Lato", "sans-serif"],
+            inter: ["Inter", "sans-serif"],
+          },
+          container: {
+            padding: "1rem",
           },
         },
-      };
-    </script>
-  </head>
+      },
+    };
+  </script>
 
   <body class="font-lato">
-    <header class="w-11/12 mx-auto">
-      <!-- Nav Section -->
-      <section>
-        <nav
-          class="w-11/12 mx-auto py-3 flex flex-col lg:flex-row justify-between items-center gap-4 border-b"
-        >
-          <div class="flex items-center gap-2 w-[100px]">
-            <img src="./images/logo.webp" alt="" />
-            <h4 class="font-extrabold text-2xl">Peddy</h4>
-          </div>
-
-          <div class="">
-            <ul class="flex items-center gap-12">
-              <li><a href="">Home</a></li>
-              <li><a href="">Shop</a></li>
-              <li><a href="">Contact</a></li>
+    <!--Navber start-->
+    <div class="navBarSection fixed z-[1] w-full shadow-md">
+      <div class="navbar bg-base-100 container mx-auto py-5">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>Contact</a></li>
             </ul>
           </div>
-
-          <div class="sort border p-4 rounded-full">
-            <img
-              class="w-8 h-8"
-              src="https://img.icons8.com/?size=32&id=22396&format=png"
-              alt=""
-            />
+          <div class="btn btn-ghost text-xl">
+            <img src="./images/logo.webp" alt="" />
+            <a class="">Peddy</a>
           </div>
-        </nav>
-      </section>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>Shop</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn rounded-full border-gray-500"
+            ><i class="ri-user-line"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <!--Navber end-->
 
-      <!-- Banner Section -->
-
-      <section>
-        <div
-          class="flex flex-col justify-center items-center text-center gap-4"
-        >
-          <h4 class="text-2xl font-bold mt-10">
+    <main>
+      <!--Hero Section Start -->
+      <section class="container mx-auto flex items-center justify-center py-40">
+        <div class="text-center lg:w-[70%] xl:w-1/2 space-y-5">
+          <div class="text-gray-600 font-semibold text-lg">
             Bringing Families Together ❤️‍🔥
-          </h4>
-          <h1 class="lg:w-6/12 text-5xl lg:text-7xl font-extrabold lg:mb-8">
-            Your Path to Adoption Starts Here
-          </h1>
-          <p class="lg:w-7/12 mx-6">
-            Cats are incredible! They make great pets, especially for people who
-            are home a lot and can therefore spend a lot of time with their cat.
-            Whilst they are more independent than dogs, cats do still need a lot
-            of care and attention and this should not be underestimated. Cats
-            love to spend time with their humans and being home alone all day is
-            not a very exciting life for them.
-          </p>
-
-          <p>
-            <button class="btn bg-[#0E7A81] w-32 text-white text-sm">
-              View More
-            </button>
-          </p>
+          </div>
+          <div class="text-black font-bold text-4xl md:text-6xl">
+            Your Path to Adoption <br />
+            Starts Here
+          </div>
+          <div class="text-gray-500">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a.
+          </div>
+          <a
+            href="#main-section"
+            class="bg-[#0E7A81] btn text-white font-bold px-5"
+            >View More</a
+          >
           <div>
             <img src="./images/pet.webp" alt="" />
           </div>
         </div>
       </section>
-    </header>
+      <!--Hero Section End -->
 
-    <main class="w-11/12 mx-auto">
-      <section>
-        <div class="text-center lg:w-6/12 mx-auto my-16">
-          <h2 class="text-5xl font-bold lg:mb-8">Adopt Your Best Friend</h2>
-          <p class="mx-6">
-            It is often said that cats do not have owners but butlers, and
-            sometimes it can feel like that! To get a little insight into what
-            life with a cat might be like, we invite you to take up the 30-day
-            cat challenge to see if life with a feline is for you. Your
-            challenge, should you wish to accept it:
-          </p>
+      <!--Api Section Start -->
+      <section id="main-section" class="container mx-auto py-5">
+        <div class="text-center lg:w-1/2 mx-auto space-y-4">
+          <div class="text-black font-bold text-4xl md:text-5xl">
+            Adopt Your Best Friend
+          </div>
+          <div class="text-gray-500">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a.
+          </div>
         </div>
-        <!-- 4 card section -->
-        <div
-          id="categoryButtons"
-          class="flex flex-col mx-24 lg:mx-0 lg:flex-row lg:justify-evenly gap-5"
-        ></div>
 
-        <div class="flex justify-between items-center my-12">
-          <h4 class="font-extrabold text-xl">Best Deal For you</h4>
-          <p>
-            <button class="btn bg-[#0E7A81] w-32 text-white text-sm">
-              Sort by Price
+        <!--Category button section-->
+        <div class="py-10">
+          <div
+            id="category-btn-container"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-[95%] xl:gap-10 lg:w-[75%] mx-auto"
+          ></div>
+
+          <div class="flex justify-between mt-10">
+            <div class="font-bold text-2xl">Best Deal For You</div>
+            <button
+              id="sort-btn"
+              class="bg-[#0E7A81] btn text-white fontt-bold"
+            >
+              Sort By price
             </button>
-          </p>
+          </div>
+          <!--Pet card section-->
+          <div class="flex gap-5 py-5 flex-col xl:flex-row">
+            <!--loader div-->
+            <div id="loader" class="hidden">
+              <span class="loading loading-dots loading-lg"></span>
+            </div>
+
+            <!--Pet card Container-->
+            <div
+              id="pet-card-container"
+              class="w-[95%] xl:w-[75%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            ></div>
+            <!--liked pet container-->
+            <div
+              class="w-[95%] xl:w-[25%] mx-auto md:h-[70vh] overflow-y-auto border rounded-md p-2"
+            >
+              <h1
+                class="liked-text my-5 text-xl text-center font-bold border-b p-1"
+              >
+                Your Liked Pet appears here
+              </h1>
+              <div
+                id="liked-pet-container"
+                class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-2 gap-2"
+              ></div>
+            </div>
+          </div>
         </div>
       </section>
-
-      <section id="" class="flex flex-col lg:flex-row gap-6">
-        <div
-          id="grid-Card-1"
-          class="lg:w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5 py-6"
-        ></div>
-
-        <div
-          class="lg:w-4/12 h-full] card shadow-xl border py-6 px-6 mt-6 mb-6"
-        >
-          <div id="grid-Card-2" class="grid grid-cols-2 gap-4 mx-auto"></div>
-        </div>
-      </section>
+      <!--Api Section End -->
     </main>
 
-    <footer class="bg-[#131313]">
-      <section
-        class="flex flex-col lg:flex-row justify-between gap-12 px-12 bg-[#131313] w-11/12 mx-auto py-16"
-      >
-        <div>
-          <div class="flex items-center gap-2 w-[100px]">
+    <!--FOOTER SECTION START-->
+    <div class="bg-[#131313] py-10">
+      <footer class="container mx-auto footer p-10 text-white">
+        <nav>
+          <div class="flex items-center gap-2 mb-3">
             <img src="./images/logo.webp" alt="" />
-            <h4 class="font-extrabold text-2xl text-white">Peddy</h4>
+            <p class="font-bold text-2xl">Peddy</p>
           </div>
 
-          <div>
-            <p class="mb-2 mt-6 text-[#E8E8E8]">
-              Location: av. Washington 165, NY CA 54003
-            </p>
-            <p class="mt-2 text-[#E8E8E8]">Phone: +31 85 964 47 25</p>
-            <p class="mt-2 text-[#E8E8E8]">Email: info@yourdomain.com</p>
-            <p class="mt-2 mb-3 text-[#E8E8E8]">
-              Openings hours: 9.00 AM - 5.00 PM
-            </p>
-          </div>
+          <a class="link link-hover"
+            >Location: av. Washington 165, NY CA 54003</a
+          >
+          <a class="link link-hover">Phone: +31 85 964 47 25</a>
+          <a class="link link-hover">Email: info@yourdomain.com</a>
+          <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <form>
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control w-80">
+            <label class="label">
+              <span class="label-text text-white"
+                >Enter your email address</span
+              >
+            </label>
+            <div class="join">
+              <input
+                type="text"
+                placeholder="username@site.com"
+                class="input input-bordered join-item"
+              />
+              <button class="btn btn-primary join-item">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+      </footer>
+    </div>
 
-          <div class="flex gap-4">
-            <img
-              class="w-10 h-10"
-              src="https://img.icons8.com/?size=48&id=118497&format=png"
-              alt=""
-            />
-            <img
-              class="w-10 h-10"
-              src="https://img.icons8.com/?size=48&id=ClbD5JTFM7FA&format=png"
-              alt=""
-            />
-            <img
-              class="w-10 h-10"
-              src="https://img.icons8.com/?size=48&id=9a46bTk3awwI&format=png"
-              alt=""
-            />
-            <img
-              class="w-10 h-10"
-              src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png"
-              alt=""
-            />
-          </div>
-        </div>
+    <!--FOOTER SECTION END-->
 
-        <div class="">
-          <p class="mb-6 text-white text-lg">Useful Links</p>
-
-          <p class="mb-2 text-[#E8E8E8]"><a href="">Home</a></p>
-          <p class="mb-2 text-[#E8E8E8]"><a href="">About Us</a></p>
-          <p class="mb-2 text-[#E8E8E8]"><a href="">Animals</a></p>
-          <p class="mt-2 text-[#E8E8E8]"><a href="">Foundation</a></p>
-          <p class="mt-2 text-[#E8E8E8]"><a href="">Contact</a></p>
-        </div>
-
-        <div>
-          <p class="mb-6 text-white text-lg">Drop a Message</p>
-
-          <input
-            class="py-3 px-3 w-60 bg-[#1F1F1F] rounded-lg mb-4"
-            type="text"
-            placeholder="Enter your email"
-          />
-
-          <p class="">
+    <!--Dtails modal-->
+    <dialog id="details-btn" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div class="pet-details-container space-y-4"></div>
+        <div class="modal-action w-full">
+          <form method="dialog" class="w-full">
+            <!-- if there is a button in form, it will close the modal -->
             <button
-              class="btn bg-[#0E7A81] w-60 text-white text-sm border-none rounded-lg"
+              class="btn close-btn w-full border-[#0E7A81] text-[#0E7A81] font-bold"
             >
-              Subscribe
+              Close
             </button>
-          </p>
+          </form>
         </div>
-      </section>
-    </footer>
+      </div>
+    </dialog>
 
-    <script src="app.js"></script>
+    <!--Countdown modal-->
+    <dialog id="adopt-btn" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div class="countdownDetailContainer"></div>
+      </div>
+    </dialog>
+    <script src="./app.js"></script>
   </body>
 </html>
